@@ -79,3 +79,9 @@ button:hover {
 .text {
     height: 320px;
 }
+
+#container .author {
+    margin-top: 24px;
+    font-size: 24px;
+    text-align: start;
+}

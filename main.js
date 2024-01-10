@@ -25,12 +25,13 @@ function fetchQuote(url) {
         .catch(error => error.message)
 }
 
-
-
 function renderResult(data) {
     wrapper.innerHTML = "";
-    const text = document.createElement('p');
-    text.innerText = data[0].quote;
-    wrapper.appendChild(text)
+    const quote = document.createElement('p');
+    const author = document.createElement('p');
+    quote.innerText = `"${data[0].quote}"`;
+    author.innerText = data[0].author
+    author.classList.add('author')
+    wrapper.append(quote, author)
 
 }
